@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { apiKey } from './api.key';
+//import { apiKey } from './api.key';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
@@ -29,7 +29,8 @@ export class GoogleVisionService {
     headers.set('Content-Length', body.length.toString());
 
     return this.http.post(
-      `https://vision.googleapis.com/v1/images:annotate?key=${apiKey}`,
+      "",
+      //`https://vision.googleapis.com/v1/images:annotate?key=${apiKey}`,
       body
     )
     .map(res => res.json())
